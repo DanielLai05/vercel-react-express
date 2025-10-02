@@ -4,8 +4,8 @@ export default function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("https://vercel-express-api-psi.vercel.app/")
-      .then((response) => response.json())
+    fetch("https://vercel-express-api-psi.vercel.app")
+      .then((response) => response.text())
       .then((data) => setMessage(data))
       .catch((error) => console.error("Error fetching the message", error)
       )
